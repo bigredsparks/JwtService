@@ -46,6 +46,8 @@ curl -XPOST -H "Content-type: application/json" -d '{
 #### Get Users
 To get users, use the following CURL command:
 
+```
 curl -XGET -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1Njc2OTcyMDcsImV4cCI6MTU2ODMwMjAwNywiaWF0IjoxNTY3Njk3MjA3fQ.4VqKscNKeZBraD0kzUAScP-6IXaGVK7npFAy6QTOc9Y' -H "Content-type: application/json" 'http://localhost:5000/users'
+```
 
 > Note that the bearer token value will need to be retrieved from the *authenticate* method before this method will work.
