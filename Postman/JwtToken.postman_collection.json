@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "892bfd01-59ee-42aa-8270-a89ff679dd4c",
+		"name": "JwtToken",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/users/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\" : 1,\n\t\"FirstName\" : \"Test\",\n\t\"LastName\" : \"User\",\n\t\"UserName\" : \"test\",\n\t\"Password\" : \"test\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1Njc2OTY0OTAsImV4cCI6MTU2ODMwMTI5MCwiaWF0IjoxNTY3Njk2NDkwfQ.wCUA9rmIF1E6AdFKrKkapPPCBk9edgMl0R7kh0lR0kA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
